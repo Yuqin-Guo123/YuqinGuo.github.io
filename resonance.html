@@ -46,8 +46,23 @@ a {
   color: #c58fa7;
   font-size: 15px;
 }
+  .portfolio-image-block {
+  margin: 36px 0;
+}
+  .portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  margin: 40px 0;
+}
+  @media (max-width: 700px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 </style>
+
 
 </head>
 
@@ -73,9 +88,47 @@ The project also includes age-adaptive visual styles and wearable form variation
 
 This work demonstrates my skills in generative visual design, wearable device prototyping, cross-device interaction design, and inclusive experience design.
 </p>
-
-
 </div>
 
+  <div class="portfolio-grid">
+
+  <div class="portfolio-image-block">
+    <img src="images/resonance1.jpg"
+         class="zoomable-image"
+         onclick="openLightbox(this)">
+  </div>
+
+  <div class="portfolio-image-block">
+    <img src="images/resonance2.jpg"
+         class="zoomable-image"
+         onclick="openLightbox(this)">
+  </div>
+
+  <div class="portfolio-image-block">
+    <img src="images/resonance3.jpg"
+         class="zoomable-image"
+         onclick="openLightbox(this)">
+  </div>
+
+  <div class="portfolio-image-block">
+    <img src="images/resonance4.jpg"
+         class="zoomable-image"
+         onclick="openLightbox(this)">
+  </div>
+
+  <div class="portfolio-image-block">
+    <img src="images/resonance5.jpg"
+         class="zoomable-image"
+         onclick="openLightbox(this)">
+  </div>
+
+  <div class="portfolio-image-block">
+    <img src="images/resonance6.jpg"
+         class="zoomable-image"
+         onclick="openLightbox(this)">
+  </div>
+
+</div>
+  
 </body>
 </html>
