@@ -262,6 +262,34 @@
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+.about-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.profile-photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+  box-shadow: 0 6px 18px rgba(185, 156, 171, 0.18);
+  border: 3px solid #fcf7f5;
+}
+
+/* 手机端自动缩小头像 */
+@media (max-width: 768px) {
+  .about-header {
+    align-items: flex-start;
+  }
+
+  .profile-photo {
+    width: 72px;
+    height: 72px;
+  }
 }
     }
   </style>
@@ -274,7 +302,10 @@
 
   <main>
     <section>
-      <h2>About Me</h2>
+  <div class="about-header">
+    <h2>About Me</h2>
+    <img src="images/profile.jpg" alt="Yuqin Guo" class="profile-photo">
+  </div>
 
       <p class="intro">
         <span class="intro-highlight">Hey there,</span>
