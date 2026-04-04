@@ -6,81 +6,198 @@
   <title>Yuqin Guo | Portfolio</title>
   <style>
     @font-face {
-  font-family: "Broadway";
-  src: url("fonts/Broadway.ttf");
-}
+      font-family: "Broadway";
+      src: url("fonts/Broadway.ttf");
+    }
 
-@font-face {
-  font-family: "Tw Cen MT";
-  src: url("fonts/TCM___.TTF");
-}
+    @font-face {
+      font-family: "Tw Cen MT";
+      src: url("fonts/TCM___.TTF");
+    }
 
-body {
-  font-family: "Tw Cen MT", Arial, sans-serif;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-h1, h2 {
-  font-family: "Broadway", serif;
-}
-  header {
-    background: #1f3c88;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-  }
+    body {
+      margin: 0;
+      font-family: "Tw Cen MT", Arial, sans-serif;
+      background: #e9e3dc;
+      color: #6f6a64;
+      line-height: 1.75;
+    }
 
-  header h1 {
-    margin: 0;
-    font-size: 40px;
-  }
+    h1, h2 {
+      font-family: "Broadway", serif;
+      margin-top: 0;
+    }
 
-  header p {
-    margin-top: 12px;
-    font-size: 18px;
-  }
+    header {
+      background: #8c9aa3;
+      color: #f6f2ec;
+      text-align: center;
+      padding: 72px 24px 60px;
+    }
 
-  main {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 0 20px;
-  }
+    header h1 {
+      margin: 0;
+      font-size: 46px;
+      letter-spacing: 0.5px;
+    }
 
-  section {
-    background: white;
-    margin-bottom: 24px;
-    padding: 32px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    max-width: 720px;
-  }
+    header p {
+      margin: 14px 0 0;
+      font-size: 20px;
+      color: #efe8df;
+      line-height: 1.6;
+    }
 
-  section p {
-    margin-bottom: 18px;
-    font-size: 17px;
-  }
-    
-  section strong {
-  color: #1f3c88;
-  font-size: 18px;
-}
+    main {
+      width: min(1200px, calc(100% - 64px));
+      margin: 40px auto 60px;
+      padding: 0;
+    }
 
-  h2 {
-    color: #1f3c88;
-  }
+    section {
+      background: #f5f1eb;
+      margin-bottom: 28px;
+      padding: 36px 40px;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(109, 103, 97, 0.08);
+    }
 
-  .intro-highlight {
-  font-size: 24px;
-  font-weight: 500;
-  margin-bottom: 6px;
-}
+    h2 {
+      color: #7d8b85;
+      font-size: 34px;
+      margin-bottom: 22px;
+    }
 
-.intro-text {
-  font-size: 18px;
-  max-width: 680px;
-  line-height: 1.75;
-  color: #555;
-}
-</style>
+    h3 {
+      font-family: "Tw Cen MT", Arial, sans-serif;
+      font-size: 24px;
+      color: #6f7f7a;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+
+    p,
+    .intro-text,
+    section p,
+    footer p,
+    li {
+      color: #6f6a64;
+      font-size: 21px;
+      line-height: 1.85;
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    .intro {
+      margin-bottom: 22px;
+    }
+
+    .intro-highlight {
+      display: block;
+      font-size: 28px;
+      font-weight: 600;
+      color: #5f6d67;
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .intro-text {
+      display: block;
+      max-width: none;
+    }
+
+    .project {
+      padding: 22px 0;
+      border-top: 1px solid #d9d1c8;
+    }
+
+    .project:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    section strong {
+      color: #6f7f7a;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    a {
+      color: #8a6f63;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: 0.2s ease;
+    }
+
+    a:hover {
+      color: #6f7f7a;
+      border-bottom-color: #6f7f7a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 8px 24px 36px;
+    }
+
+    footer p {
+      font-size: 17px;
+      margin-bottom: 0;
+      color: #8a847d;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        padding: 56px 20px 48px;
+      }
+
+      header h1 {
+        font-size: 36px;
+      }
+
+      header p {
+        font-size: 17px;
+      }
+
+      main {
+        width: calc(100% - 28px);
+        margin: 24px auto 40px;
+      }
+
+      section {
+        padding: 24px 20px;
+        border-radius: 14px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      h3 {
+        font-size: 21px;
+      }
+
+      p,
+      .intro-text,
+      section p,
+      footer p,
+      li {
+        font-size: 18px;
+        line-height: 1.75;
+      }
+
+      .intro-highlight {
+        font-size: 24px;
+      }
+
+      section strong {
+        font-size: 19px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -90,25 +207,28 @@ h1, h2 {
 
   <main>
     <section>
-  <h2>About Me</h2>
+      <h2>About Me</h2>
 
-  <p class="intro">
-  <span class="intro-highlight">Hey there,</span><br>
-  <span class="intro-text">
-    This is Yuqin Guo, a multidisciplinary interaction designer and creative technologist working at the intersection of fashion, emerging media, and human–computer interaction (HCI). I received my BFA in Fashion Design from Parsons School of Design and am currently pursuing my master’s degree at NYU’s Interactive Telecommunications Program (ITP).
-  </span>
-</p>
-  <p>
-    My work sits between physical materials, computational systems, and interactive storytelling. I enjoy translating conceptual ideas into working prototypes and experiential interfaces that people can see, touch, and engage with.
-  </p>
+      <p class="intro">
+        <span class="intro-highlight">Hey there,</span>
+        <span class="intro-text">
+          This is Yuqin Guo, a multidisciplinary interaction designer and creative technologist working at the intersection of fashion, emerging media, and human–computer interaction (HCI). I received my BFA in Fashion Design from Parsons School of Design and am currently pursuing my master’s degree at NYU’s Interactive Telecommunications Program (ITP).
+        </span>
+      </p>
 
-  <p>
-    I work with tools such as Unity, Arduino, JavaScript, TouchDesigner, sensor-based interaction, and 3D modeling to build responsive environments and immersive experiences. I’m particularly interested in connecting user experience, system logic, hardware interaction, and narrative expression to design meaningful human-centered technologies through an HCI-driven approach.
-  </p>
+      <p>
+        My work sits between physical materials, computational systems, and interactive storytelling. I enjoy translating conceptual ideas into working prototypes and experiential interfaces that people can see, touch, and engage with.
+      </p>
 
-  <p>
-    Rather than working within a single discipline, I see my practice as a bridge between fashion, interaction design, and creative technology—exploring how ideas move from concept to tangible experience.
-</section>
+      <p>
+        I work with tools such as Unity, Arduino, JavaScript, TouchDesigner, sensor-based interaction, and 3D modeling to build responsive environments and immersive experiences. I’m particularly interested in connecting user experience, system logic, hardware interaction, and narrative expression to design meaningful human-centered technologies through an HCI-driven approach.
+      </p>
+
+      <p>
+        Rather than working within a single discipline, I see my practice as a bridge between fashion, interaction design, and creative technology—exploring how ideas move from concept to tangible experience.
+      </p>
+    </section>
+
     <section>
       <h2>Projects</h2>
 
@@ -128,32 +248,37 @@ h1, h2 {
     </section>
 
     <section>
-  <h2>Skills</h2>
+      <h2>Skills</h2>
 
-  <p><strong>Interaction & Prototyping:</strong><br>
-  Unity, C#, JavaScript, Arduino, TouchDesigner, Unreal Engine, Creative Coding
-  </p>
+      <p>
+        <strong>Interaction & Prototyping:</strong><br>
+        Unity, C#, JavaScript, Arduino, TouchDesigner, Unreal Engine, Creative Coding
+      </p>
 
-  <p><strong>Digital Product Design:</strong><br>
-  Figma, Sketch, UI/UX Design, Information Architecture, Interaction Flow, Wireframing, Prototype Iteration
-  </p>
+      <p>
+        <strong>Digital Product Design:</strong><br>
+        Figma, Sketch, UI/UX Design, Information Architecture, Interaction Flow, Wireframing, Prototype Iteration
+      </p>
 
-  <p><strong>3D / XR Production:</strong><br>
-  Blender, Nomad, CLO3D, 3D Printing, AR/VR/XR Prototyping, Spatial Interaction
-  </p>
+      <p>
+        <strong>3D / XR Production:</strong><br>
+        Blender, Nomad, CLO3D, 3D Printing, AR/VR/XR Prototyping, Spatial Interaction
+      </p>
 
-  <p><strong>Visual & Media Tools:</strong><br>
-  Photoshop, After Effects, Premiere, Procreate, Illustration, Motion Graphics
-  </p>
+      <p>
+        <strong>Visual & Media Tools:</strong><br>
+        Photoshop, After Effects, Premiere, Procreate, Illustration, Motion Graphics
+      </p>
 
-  <p><strong>Research & Product Thinking:</strong><br>
-  Cross-disciplinary Collaboration, User Experience Thinking, Requirement Analysis, Proof-of-Concept (PoC), Presentation, Content & Data Review
-  </p>
+      <p>
+        <strong>Research & Product Thinking:</strong><br>
+        Cross-disciplinary Collaboration, User Experience Thinking, Requirement Analysis, Proof-of-Concept (PoC), Presentation, Content & Data Review
+      </p>
+    </section>
 
-</section>
     <section>
       <h2>Contact</h2>
-      <p>Email: yuqinguo0302@gmail.com</p>
+      <p>Email: <a href="mailto:yuqinguo0302@gmail.com">yuqinguo0302@gmail.com</a></p>
       <p>GitHub: <a href="https://github.com/yuqin-guo123" target="_blank">github.com/yuqin-guo123</a></p>
     </section>
   </main>
