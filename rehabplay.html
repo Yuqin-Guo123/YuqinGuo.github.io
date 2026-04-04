@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resonance | Yuqin Guo</title>
+<title>Rehabplay | Yuqin Guo</title>
 
 <style>
 
@@ -46,10 +46,51 @@ a {
   color: #c58fa7;
   font-size: 15px;
 }
+  .portfolio-image-block {
+  margin: 36px 0;
+}
+  .zoomable-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  margin: 30px auto;
+  cursor: zoom-in;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+  .lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(40, 35, 38, 0.85);
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+.lightbox.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  border-radius: 14px;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.35);
+}
+  @media (max-width: 700px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 </style>
 
+
 </head>
+
 
 <body>
 
@@ -82,5 +123,57 @@ This project reflects my practice across creative coding, physical computing, se
 
 </div>
 
+  <div class="portfolio-grid">
+
+  <div class="portfolio-image-block">
+    <img src="images/rehabplay1.jpg"
+         class="zoomable-image"
+         onclick="openLightbox(this)">
+  </div>
+
+  <div class="portfolio-image-block">
+    <img src="images/rehabplay2.jpg"
+         class="zoomable-image"
+         onclick="openLightbox(this)">
+  </div>
+
+  <div class="portfolio-image-block">
+    <img src="images/rehabplay3.jpg"
+         class="zoomable-image"
+         onclick="openLightbox(this)">
+  </div>
+
+  <div class="portfolio-image-block">
+    <img src="images/rehabplay4.jpg"
+         class="zoomable-image"
+         onclick="openLightbox(this)">
+  </div>
+
+  <div class="portfolio-image-block">
+    <img src="images/rehabplaye5.jpg"
+         class="zoomable-image"
+         onclick="openLightbox(this)">
+  </div>
+
+ 
+
+</div>
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <img id="lightbox-img" src="" alt="Expanded image">
+</div>
+
+<script>
+function openLightbox(img) {
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  lightboxImg.src = img.src;
+  lightbox.classList.add("show");
+}
+
+function closeLightbox() {
+  document.getElementById("lightbox").classList.remove("show");
+}
+</script>
 </body>
 </html>
