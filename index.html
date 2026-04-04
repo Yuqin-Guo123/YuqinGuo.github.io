@@ -5,10 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yuqin Guo | Portfolio</title>
   <style>
-    .project {
+    .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+    .project-card {
   display: block;
   text-decoration: none;
   color: inherit;
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #f2ecef;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-image img {
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  transition: transform 0.25s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
 }
     @font-face {
       font-family: "Broadway";
@@ -226,6 +253,11 @@
   margin-top: 14px;
   font-size: 26px;
 }
+      @media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
     }
   </style>
 </head>
@@ -262,10 +294,14 @@
     <section>
   <h2>Projects</h2>
 
-  <a href="resonance.html" class="project-card">
-    <img src="images/resonance-cover.jpg" alt="Resonance project cover">
-    <h3>Resonance</h3>
-  </a>
+  <div class="projects-grid">
+
+    <a href="resonance.html" class="project-card">
+      <div class="project-image">
+        <img src="images/resonance-cover.jpg" alt="Resonance">
+      </div>
+      <h3>Resonance</h3>
+    </a>
 
       <div class="project">
         <h3>Project 2: Add Your Project Name</h3>
