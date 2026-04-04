@@ -202,6 +202,28 @@
       section strong {
         font-size: 19px;
       }
+      .project-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 30px;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 16px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover img {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(170,140,155,0.25);
+}
+
+.project-card h3 {
+  margin-top: 14px;
+  font-size: 26px;
+}
     }
   </style>
 </head>
@@ -238,13 +260,12 @@
     <section>
   <h2>Projects</h2>
 
-  <a href="resonance.html" class="project">
+  <section>
+  <h2>Projects</h2>
+
+  <a href="resonance.html" class="project-card">
+    <img src="images/resonance-cover.jpg" alt="Resonance project cover">
     <h3>Resonance</h3>
-    <p>
-      Resonance is an interactive installation exploring the relationship between
-      body movement, sensors, and responsive audiovisual environments.
-    </p>
-    <p><strong>Tools:</strong> Arduino, Sensors, TouchDesigner</p>
   </a>
 
       <div class="project">
