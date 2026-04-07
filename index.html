@@ -38,36 +38,38 @@
 .project-card:hover img {
   transform: scale(1.05);
 }
-    @font-face {
-  font-family: "Broadway";
-  src: url("fonts/Broadway.woff2") format("woff2");
-  font-weight: normal;
+@font-face {
+  font-family: "BroadwayCustom";
+  src:
+    url("./fonts/Broadway.woff2") format("woff2"),
+    url("./fonts/BROADW.TTF") format("truetype");
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: "Tw Cen MT";
-  src: url("fonts/TCM____.woff2") format("woff2");
-  font-weight: normal;
+  font-family: "TwCenCustom";
+  src:
+    url("./fonts/TCM____.woff2") format("woff2"),
+    url("./fonts/TCM____.TTF") format("truetype");
+  font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
-    * {
-      box-sizing: border-box;
-    }
+body {
+  margin: 0;
+  font-family: "TwCenCustom", Arial, sans-serif;
+  background: #f3ecef;
+  color: #6d666b;
+  line-height: 1.8;
+}
 
-    body {
-      margin: 0;
-      font-family: "Tw Cen MT", Arial, sans-serif;
-      background: #f3ecef;
-      color: #6d666b;
-      line-height: 1.8;
-    }
-
-    h1, h2 {
-      font-family: "Broadway", serif;
-      margin-top: 0;
-    }
+h1, h2 {
+  font-family: "BroadwayCustom", serif;
+  margin-top: 0;
+}
 
     header {
       background: linear-gradient(135deg, #d8b3c3 0%, #b8c7d9 100%);
@@ -340,7 +342,6 @@
   <h2>Projects</h2>
 
   <div class="projects-grid">
-
     <a href="resonance.html" class="project-card">
       <div class="project-image">
         <img src="images/resonance-cover.jpg" alt="Resonance">
@@ -348,15 +349,14 @@
       <h3>Resonance</h3>
     </a>
 
-      <a href="rehabplay.html" class="project-card">
+    <a href="rehabplay.html" class="project-card">
       <div class="project-image">
         <img src="images/rehabplay-cover.jpg" alt="Rehabplay">
       </div>
       <h3>Rehabplay</h3>
     </a>
-
-  
-    </section>
+  </div>
+</section>
 
     <section>
       <h2>Skills</h2>
