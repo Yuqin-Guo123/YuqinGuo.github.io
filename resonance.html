@@ -14,9 +14,10 @@
 
 @font-face {
   font-family: "TwCenCustom";
-  src: url("./fonts/TCM_____.woff2") format("woff2");
+  src: url("./fonts/twcen.woff2") format("woff2");
   font-display: swap;
 }
+
 body {
   font-family: "TwCenCustom", Arial, sans-serif;
   background: #f3ecef;
@@ -56,133 +57,113 @@ a {
   color: #c58fa7;
   font-size: 15px;
 }
-  .portfolio-image-block {
-  margin: 36px 0;
+
+.portfolio-grid {
+  max-width: 900px;
+  margin: 0 auto;
 }
-  .zoomable-image {
+
+.portfolio-image-block {
+  margin: 36px 0;
+  overflow: visible;
+}
+
+.zoomable-image {
   width: 100%;
   max-width: 600px;
   height: auto;
   border-radius: 16px;
   display: block;
   margin: 30px auto;
-  cursor: zoom-in;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-  .lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(40, 35, 38, 0.85);
-  z-index: 9999;
-  cursor: zoom-out;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.lightbox.show {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.zoomable-image:hover {
+  transform: scale(1.18);
+  box-shadow: 0 18px 60px rgba(0,0,0,0.25);
+  z-index: 10;
+  position: relative;
 }
 
-.lightbox img {
-  max-width: 92vw;
-  max-height: 92vh;
-  border-radius: 14px;
-  box-shadow: 0 18px 60px rgba(0,0,0,0.35);
-}
-  @media (max-width: 700px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
+@media (hover: none) {
+  .zoomable-image:hover {
+    transform: none;
+    box-shadow: none;
   }
 }
 
+@media (max-width: 700px) {
+  body {
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 19px;
+  }
+
+  .zoomable-image {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+}
 </style>
-
-
 </head>
 
 <body>
 
 <div class="container">
+  <a href="index.html">← Back to Home</a>
 
-<a href="index.html">← Back to Home</a>
+  <h1>Resonance</h1>
 
-<h1>Resonance</h1>
+  <h2>A Multisensory System for Experiencing Music through Vision and Haptics</h2>
 
-<h2>
-A Multisensory System for Experiencing Music through Vision and Haptics
-</h2>
-
-
-<p>
-Resonance is a wearable interaction design project that translates music from an auditory experience into visual and haptic feedback, enabling hearing-impaired users to perceive rhythm and emotion through alternative sensory channels. 
+  <p>
+    Resonance is a wearable interaction design project that translates music from an auditory experience into visual and haptic feedback, enabling hearing-impaired users to perceive rhythm and emotion through alternative sensory channels.
   </p>
+
   <p>
     The project was inspired by my grandmother’s hearing loss and explores accessible ways of experiencing music beyond sound. I developed a real-time audio-responsive visual system using TouchDesigner, and projected these dynamic visuals onto a pair of self-designed and 3D-printed wearable glasses to create an immersive visual music interface. In parallel, I designed a companion mobile app that analyzes musical beats and transmits synchronized haptic feedback via smartphone and Apple Watch vibration.
+  </p>
 
-The project also includes age-adaptive visual styles and wearable form variations, improving emotional accessibility across different user groups.
-    </p>
+  <p>
+    The project also includes age-adaptive visual styles and wearable form variations, improving emotional accessibility across different user groups.
+  </p>
 
-<p>
-  This work demonstrates my skills in generative visual design, wearable device prototyping, cross-device interaction design, and inclusive experience design.
-</p>
+  <p>
+    This work demonstrates my skills in generative visual design, wearable device prototyping, cross-device interaction design, and inclusive experience design.
+  </p>
 </div>
 
-  <div class="portfolio-grid">
-
+<div class="portfolio-grid">
   <div class="portfolio-image-block">
-    <img src="images/resonance1.jpg"
-         class="zoomable-image"
-         onclick="openLightbox(this)">
+    <img src="images/resonance1.jpg" class="zoomable-image" alt="Resonance image 1">
   </div>
 
   <div class="portfolio-image-block">
-    <img src="images/resonance2.jpg"
-         class="zoomable-image"
-         onclick="openLightbox(this)">
+    <img src="images/resonance2.jpg" class="zoomable-image" alt="Resonance image 2">
   </div>
 
   <div class="portfolio-image-block">
-    <img src="images/resonance3.jpg"
-         class="zoomable-image"
-         onclick="openLightbox(this)">
+    <img src="images/resonance3.jpg" class="zoomable-image" alt="Resonance image 3">
   </div>
 
   <div class="portfolio-image-block">
-    <img src="images/resonance4.jpg"
-         class="zoomable-image"
-         onclick="openLightbox(this)">
+    <img src="images/resonance4.jpg" class="zoomable-image" alt="Resonance image 4">
   </div>
 
   <div class="portfolio-image-block">
-    <img src="images/resonance5.jpg"
-         class="zoomable-image"
-         onclick="openLightbox(this)">
+    <img src="images/resonance5.jpg" class="zoomable-image" alt="Resonance image 5">
   </div>
 
   <div class="portfolio-image-block">
-    <img src="images/resonance6.jpg"
-         class="zoomable-image"
-         onclick="openLightbox(this)">
+    <img src="images/resonance6.jpg" class="zoomable-image" alt="Resonance image 6">
   </div>
-
-</div>
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" src="" alt="Expanded image">
 </div>
 
-<script>
-function openLightbox(img) {
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-
-  lightboxImg.src = img.src;
-  lightbox.classList.add("show");
-}
-
-function closeLightbox() {
-  document.getElementById("lightbox").classList.remove("show");
-}
-</script>
 </body>
 </html>
