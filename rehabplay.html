@@ -6,7 +6,7 @@
 <title>Rehabplay | Yuqin Guo</title>
 
 <style>
-  @font-face {
+@font-face {
   font-family: "BroadwayCustom";
   src: url("./fonts/Broadway.woff2") format("woff2");
   font-display: swap;
@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: "TwCenCustom";
-  src: url("./fonts/TCM_____.woff2") format("woff2");
+  src: url("./fonts/twcen.woff2") format("woff2");
   font-display: swap;
 }
 
@@ -57,134 +57,113 @@ a {
   color: #c58fa7;
   font-size: 15px;
 }
-  .portfolio-image-block {
-  margin: 36px 0;
+
+.portfolio-grid {
+  max-width: 900px;
+  margin: 0 auto;
 }
-  .zoomable-image {
+
+.portfolio-image-block {
+  margin: 36px 0;
+  overflow: visible;
+}
+
+.zoomable-image {
   width: 100%;
   max-width: 600px;
   height: auto;
   border-radius: 16px;
   display: block;
   margin: 30px auto;
-  cursor: zoom-in;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-  .lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(40, 35, 38, 0.85);
-  z-index: 9999;
-  cursor: zoom-out;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-.lightbox.show {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.zoomable-image:hover {
+  transform: scale(1.18);
+  box-shadow: 0 18px 60px rgba(0,0,0,0.25);
+  z-index: 10;
+  position: relative;
 }
 
-.lightbox img {
-  max-width: 92vw;
-  max-height: 92vh;
-  border-radius: 14px;
-  box-shadow: 0 18px 60px rgba(0,0,0,0.35);
-}
-  @media (max-width: 700px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
+@media (hover: none) {
+  .zoomable-image:hover {
+    transform: none;
+    box-shadow: none;
   }
 }
 
+@media (max-width: 700px) {
+  body {
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 19px;
+  }
+
+  .zoomable-image {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+}
 </style>
-
-
 </head>
-
 
 <body>
 
 <div class="container">
+  <a href="index.html">← Back to Home</a>
 
-<a href="index.html">← Back to Home</a>
+  <h1>Rehabplay</h1>
 
-<h1>Rehabplay</h1>
+  <h2>An Interactive Game for Hand Rehabilitation</h2>
 
-<h2>
-An Interactive Game for Hand Rehabilitation
-</h2>
-
-
-<p>
-Rehabplay is a game-based rehabilitation system designed to support patients recovering from hand injuries by transforming repetitive therapy exercises into an engaging interactive experience. 
+  <p>
+    Rehabplay is a game-based rehabilitation system designed to support patients recovering from hand injuries by transforming repetitive therapy exercises into an engaging interactive experience.
   </p>
   
-  <p>I was inspired by a child who struggled to stay motivated using a traditional stress ball during tendon recovery, which led me to explore how physical therapy could be redesigned through play.
+  <p>
+    I was inspired by a child who struggled to stay motivated using a traditional stress ball during tendon recovery, which led me to explore how physical therapy could be redesigned through play.
+  </p>
 
-I developed a custom rehabilitation controller using Arduino and a force sensor that captures grip strength and translates it into real-time game input. The game itself was designed and illustrated by me and built in p5.js using JavaScript, where falling objects are controlled through pressure-based interaction. At the same time, the sensor data can be used to help clinicians observe training intensity and recovery progress.
-
-To increase emotional accessibility and user motivation, I also designed a soft toy–integrated controller form that makes the device feel more approachable and playful rather than clinical.
-    </p>
+  <p>
+    I developed a custom rehabilitation controller using Arduino and a force sensor that captures grip strength and translates it into real-time game input. The game itself was designed and illustrated by me and built in p5.js using JavaScript, where falling objects are controlled through pressure-based interaction. At the same time, the sensor data can be used to help clinicians observe training intensity and recovery progress.
+  </p>
   
-<p>
-This project reflects my practice across creative coding, physical computing, sensor-based interaction design, and playful healthcare experience prototyping.
-</p>
-
-
+  <p>
+    To increase emotional accessibility and user motivation, I also designed a soft toy–integrated controller form that makes the device feel more approachable and playful rather than clinical.
+  </p>
+  
+  <p>
+    This project reflects my practice across creative coding, physical computing, sensor-based interaction design, and playful healthcare experience prototyping.
+  </p>
 </div>
 
-  <div class="portfolio-grid">
-
+<div class="portfolio-grid">
   <div class="portfolio-image-block">
-    <img src="images/rehabplay1.jpg"
-         class="zoomable-image"
-         onclick="openLightbox(this)">
+    <img src="images/rehabplay1.jpg" class="zoomable-image" alt="Rehabplay image 1">
   </div>
 
   <div class="portfolio-image-block">
-    <img src="images/rehabplay2.jpg"
-         class="zoomable-image"
-         onclick="openLightbox(this)">
+    <img src="images/rehabplay2.jpg" class="zoomable-image" alt="Rehabplay image 2">
   </div>
 
   <div class="portfolio-image-block">
-    <img src="images/rehabplay3.jpg"
-         class="zoomable-image"
-         onclick="openLightbox(this)">
+    <img src="images/rehabplay3.jpg" class="zoomable-image" alt="Rehabplay image 3">
   </div>
 
   <div class="portfolio-image-block">
-    <img src="images/rehabplay4.jpg"
-         class="zoomable-image"
-         onclick="openLightbox(this)">
+    <img src="images/rehabplay4.jpg" class="zoomable-image" alt="Rehabplay image 4">
   </div>
 
   <div class="portfolio-image-block">
-    <img src="images/rehabplay5.jpg"
-         class="zoomable-image"
-         onclick="openLightbox(this)">
+    <img src="images/rehabplay5.jpg" class="zoomable-image" alt="Rehabplay image 5">
   </div>
-
- 
-
-</div>
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-  <img id="lightbox-img" src="" alt="Expanded image">
 </div>
 
-<script>
-function openLightbox(img) {
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-
-  lightboxImg.src = img.src;
-  lightbox.classList.add("show");
-}
-
-function closeLightbox() {
-  document.getElementById("lightbox").classList.remove("show");
-}
-</script>
 </body>
 </html>
