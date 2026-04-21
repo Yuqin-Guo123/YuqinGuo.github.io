@@ -5,10 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yuqin Guo | Portfolio</title>
   <style>
-    .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+
+.projects-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* 横向滚动区域 */
+
+.projects-scroll {
+  display: flex;
   gap: 28px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 6px;
+  scroll-snap-type: x mandatory;
+}
+
+.projects-scroll .project-card {
+  flex: 0 0 calc((100% - 112px) / 5);
+  scroll-snap-align: start;
+}
+/* 隐藏滚动条（保持干净风格） */
+
+.projects-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* 控制每个卡片宽度（约一行5个） */
+
+.projects-scroll .project-card {
+  flex: 0 0 calc((100% - 112px) / 5);
+}
+
+/* 左右箭头按钮 */
+
+.scroll-btn {
+  position: absolute;
+  z-index: 10;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+
+  background: rgba(255,255,255,0.9);
+  color: #c58fa7;
+  font-size: 28px;
+
+  box-shadow: 0 6px 18px rgba(170,140,155,0.2);
+
+  transition: 0.2s ease;
+}
+
+/* hover效果 */
+
+.scroll-btn:hover {
+  background: #f6eef2;
+  transform: scale(1.08);
+}
+
+/* 左右位置 */
+
+.scroll-btn.left {
+  left: -18px;
+}
+
+.scroll-btn.right {
+  right: -18px;
 }
     .project-card {
   display: block;
@@ -294,7 +359,11 @@ h1, h2 {
   box-shadow: 0 6px 18px rgba(185, 156, 171, 0.18);
   border: 3px solid #fcf7f5;
 }
-
+@media (max-width: 900px) {
+  .projects-scroll .project-card {
+    flex: 0 0 calc((100% - 56px) / 2);
+  }
+}
 @media (max-width: 768px) {
   .profile-photo {
     width: 100px !important;
@@ -342,7 +411,12 @@ h1, h2 {
     <section>
   <h2>Projects</h2>
 
-  <div class="projects-grid">
+  <div class="projects-wrapper">
+
+  <button class="scroll-btn left" onclick="scrollProjects(-1)">‹</button>
+
+  <div class="projects-scroll" id="projectsScroll">
+
     <a href="resonance.html" class="project-card">
       <div class="project-image">
         <img src="images/resonance-cover.jpg" alt="Resonance">
@@ -357,14 +431,18 @@ h1, h2 {
       <h3>Rehabplay</h3>
     </a>
 
-     <a href="Where The World Gathers.html" class="project-card">
+    <a href="Where The World Gathers.html" class="project-card">
       <div class="project-image">
         <img src="images/WTWG-cover.png" alt="Where The World Gathers">
       </div>
       <h3>Where The World Gathers</h3>
     </a>
-    
+
   </div>
+
+  <button class="scroll-btn right" onclick="scrollProjects(1)">›</button>
+
+</div>
 </section>
 
     <section>
@@ -406,5 +484,15 @@ h1, h2 {
   <footer>
     <p>© 2026 Yuqin Guo. All rights reserved.</p>
   </footer>
+  <script>
+function scrollProjects(direction) {
+  const container = document.getElementById("projectsScroll");
+  const scrollAmount = container.clientWidth * 0.8;
+  container.scrollBy({
+    left: direction * scrollAmount,
+    behavior: "smooth"
+  });
+}
+</script>
 </body>
 </html>
