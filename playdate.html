@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Next Playdate | Yuqin Guo</title>
 
+<style>
+@font-face {
+  font-family: "BroadwayCustom";
+  src: url("./fonts/Broadway.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TwCenCustom";
+  src: url("./fonts/twcen.woff2") format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "TwCenCustom", Arial, sans-serif;
+  background: #f3ecef;
+  color: #6d666b;
+  margin: 0;
+  padding: 40px;
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+.container {
+  max-width: 680px;
+  margin: auto;
+}
+
+h1 {
+  font-family: "BroadwayCustom", serif;
+  color: #7f6d7a;
+  font-size: 42px;
+  margin-bottom: 6px;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 500;
+  color: #a88f98;
+  margin-top: 6px;
+  margin-bottom: 28px;
+}
+
+p {
+  margin-bottom: 22px;
+}
+
+a {
+  text-decoration: none;
+  color: #c58fa7;
+  font-size: 15px;
+}
+
+.portfolio-grid {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.portfolio-image-block {
+  margin: 36px 0;
+  overflow: visible;
+}
+
+.zoomable-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+  margin: 30px auto;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.zoomable-image:hover {
+  transform: scale(2.3);
+  box-shadow: 0 18px 60px rgba(0,0,0,0.25);
+  z-index: 10;
+  position: relative;
+}
+
+@media (hover: none) {
+  .zoomable-image:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 24px;
+  }
+
+  h1 {
+    font-size: 34px;
+  }
+
+  h2 {
+    font-size: 19px;
+  }
+
+  .zoomable-image {
+    max-width: 100%;
+    margin: 20px auto;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <a href="index.html">← Back to Home</a>
+
+  <h1>Your Next Playdate</h1>
+
+  <h2>A 3D scanning project on packaged masculinity in dating culture</h2>
+
+  <p>
+    This project explores how male personas are constructed within contemporary dating culture and visual media. Using four male models as subjects, I applied 3D scanning to transform them into toy-like figures presented inside Barbie-style packaging. By selectively amplifying familiar behavioral traits and socially recognizable stereotypes as a visual language, the project reflects on how certain male identity types are shaped, repeated, and circulated in contemporary culture. The final outcome takes the form of a commercial-style video that examines how identity can be packaged, performed, and mediated through advertising aesthetics. The animated background sequences in the video were generated through a vibe coding workflow as part of the visual experimentation process.
+  </p>
+  
+  <p>
+   Through this project, I experimented with combining 3D scanning, character transformation, and video-based storytelling as a way to explore identity through object-like representations. The project also helped me further develop my workflow across 3D capture, visual narrative construction, and concept-driven media prototyping.
+</div>
+
+<div class="portfolio-grid">
+  <div class="portfolio-image-block">
+    <img src="images/playdate1.jpg" class="zoomable-image" alt="Playdate image 1">
+  </div>
+
+  <div class="portfolio-image-block">
+    <img src="images/playdate2.jpg" class="zoomable-image" alt="Playdate image 2">
+  </div>
+
+  <div class="portfolio-image-block">
+    <img src="images/playdate3.jpg" class="zoomable-image" alt="Playdate image 3">
+  </div>
+
+  <div class="portfolio-image-block">
+    <img src="images/playdate4.jpg" class="zoomable-image" alt="Playdate image 4">
+  </div>
+
+  <div class="portfolio-image-block">
+    <img src="images/playdate5.jpg" class="zoomable-image" alt="Playdate image 5">
+  </div>
+</div>
+
+</body>
+</html>
